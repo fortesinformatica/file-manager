@@ -10,5 +10,11 @@ file_managers = {
     pdf: {
         type: 'local',
         root_path:'reports/'
+    },
+    txt: {
+        type: 'S3',
+        access_key_id: 'your key',
+        secret_access_key: 'your access',
+        bucket: 'your bucket'
     }
 }
