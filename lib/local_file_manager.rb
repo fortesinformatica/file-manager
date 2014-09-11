@@ -9,7 +9,7 @@ class LocalFileManager
   def read_file file_name
     root_path = options[:root_path]
     print "Reading file \"#{file_name}\" from local folder \"#{root_path}\"..."
-    contents = File.open("#{root_path}/#{file_name}", 'rb') { |f| f.read }
+    contents = File.open("#{root_path}/#{file_name}", 'r:UTF-8') { |f| f.read }
     puts 'done.'
 
     contents
