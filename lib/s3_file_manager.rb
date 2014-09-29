@@ -12,7 +12,7 @@ class S3FileManager
     bucket = s3_service.buckets[options[:bucket]]
 
     print "Reading file \"#{file_name}\" from bucket \"#{:bucket}\"..."
-    contents = bucket.objects[file_name].read
+    contents = bucket.objects[file_name].read.force_encoding('utf-8')
     puts 'done.'
 
     contents
