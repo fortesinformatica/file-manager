@@ -11,7 +11,7 @@ class S3FileManager
     s3_service = connect_s3_service
     bucket = s3_service.buckets[options[:bucket]]
 
-    print "Reading file \"#{file_name}\" from bucket \"#{:bucket}\"..."
+    print "Reading file \"#{file_name}\" from bucket \"#{options[:bucket]}\"..."
     contents = bucket.objects[file_name].read.force_encoding('utf-8')
     puts 'done.'
 
@@ -19,7 +19,7 @@ class S3FileManager
   end
 
   def save_file file_name, file_contents
-    print "Saving file \"#{file_name}\" to bucket \"#{:bucket}\"..."
+    print "Saving file \"#{file_name}\" to bucket \"#{options[:bucket]}\"..."
     s3_service = connect_s3_service
     bucket = s3_service.buckets[options[:bucket]]
 
