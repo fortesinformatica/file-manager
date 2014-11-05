@@ -15,7 +15,7 @@ class LocalFileManager
     contents
   end
 
-  def save_file file_name, file_contents
+  def save_file(file_name, file_contents, write_options = {})
     root_path = options[:root_path]
     print "Saving file \"#{file_name}\" to local folder \"#{root_path}\"..."
     File.open("#{root_path}/#{file_name}", 'wb') { |f| f.write(file_contents) }

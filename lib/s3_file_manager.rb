@@ -18,12 +18,12 @@ class S3FileManager
     contents
   end
 
-  def save_file file_name, file_contents
+  def save_file(file_name, file_contents, write_options = {})
     print "Saving file \"#{file_name}\" to bucket \"#{options[:bucket]}\"..."
     s3_service = connect_s3_service
     bucket = s3_service.buckets[options[:bucket]]
 
-    bucket.objects["#{file_name}"].write(file_contents.to_s)
+    bucket.objects["#{file_name}"].write(file_contents.to_s, write_options)
     puts 'done.'
   end
 
