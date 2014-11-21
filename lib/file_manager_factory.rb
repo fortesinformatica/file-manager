@@ -1,10 +1,12 @@
 require 's3_file_manager'
 require 'local_file_manager'
+require 'memory_file_manager'
 
 class FileManagerFactory
   FILE_MANAGERS = {
-      'S3'    => ::S3FileManager,
-      'local' => ::LocalFileManager,
+      'S3'     => ::S3FileManager,
+      'local'  => ::LocalFileManager,
+      'memory' => ::MemoryFileManager
   }
 
   def initialize(file_managers_config)
