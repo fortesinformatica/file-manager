@@ -21,4 +21,12 @@ class LocalFileManager
     File.open("#{root_path}/#{file_name}", 'wb') { |f| f.write(file_contents) }
     puts 'done.'
   end
+
+  def list_files(file_extension = '*')
+    
+  end
+
+  def delete_file file_name
+
+  end
 end

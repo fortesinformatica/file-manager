@@ -27,6 +27,25 @@ class S3FileManager
     puts 'done.'
   end
 
+  def list_files
+#    objects = []
+#    last_key = nil
+#    begin
+#      new_objects = AWS::S3::Bucket.objects(bucket_name, :marker => last_key)
+#      objects    += new_objects
+#      last_key    = objects.last.key
+#    end while new_objects.size > 0
+     #TODO
+     bucket = s3_service.buckets[options[:bucket]]
+     bucket.each do |object|
+        puts "#{object.key}\t#{object.about['content-length']}\t#{object.about['last-modified']}"
+     end
+  end
+
+  def delete_file file_name
+    #TODO
+  end
+
   private
 
   def connect_s3_service

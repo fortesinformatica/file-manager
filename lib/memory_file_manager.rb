@@ -14,4 +14,12 @@ class MemoryFileManager
     @data["#{file_name}"] = file_contents.to_s
   end
 
+  def list_files
+    @data.keys
+  end
+
+  def delete_file file_name
+    @data.delete "#{file_name}"
+  end
+
 end
