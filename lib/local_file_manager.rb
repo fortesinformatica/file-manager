@@ -22,11 +22,17 @@ class LocalFileManager
     puts 'done.'
   end
 
-  def list_files(file_extension = '*')
-    
+  def list_files(prefix = '', file_extension = '*')
+    root_path = options[:root_path]
+    print "Listing \"#{prefix}*.#{file_extension}\" from local folder \"#{root_path}\"..."
+    files = Dir["#{root_path}/#{prefix}*.#{file_extension}"].map{|f| File.basename(f)}
+    puts 'done.'
+    files
   end
 
   def delete_file file_name
-
+    print "Deleting file \"#{file_name}\" from local folder \"#{root_path}\"..."
+    File.delete(file_name)
+    puts 'done.'
   end
 end

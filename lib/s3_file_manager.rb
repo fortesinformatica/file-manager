@@ -27,23 +27,40 @@ class S3FileManager
     puts 'done.'
   end
 
-  def list_files
-#    objects = []
-#    last_key = nil
-#    begin
-#      new_objects = AWS::S3::Bucket.objects(bucket_name, :marker => last_key)
-#      objects    += new_objects
-#      last_key    = objects.last.key
-#    end while new_objects.size > 0
-     #TODO
-     bucket = s3_service.buckets[options[:bucket]]
-     bucket.each do |object|
-        puts "#{object.key}\t#{object.about['content-length']}\t#{object.about['last-modified']}"
-     end
+  def list_files(prefix = '', file_extension = '*')
+    # objects = []
+    # last_key = nil
+    # begin
+    #   new_objects = AWS::S3::Bucket.objects(bucket_name, :marker => last_key)
+    #   objects    += new_objects
+    #   last_key    = objects.last.key
+    # end while new_objects.size > 0
+    #
+    # bucket = s3_service.buckets[options[:bucket]]
+    # bucket.each do |object|
+    #    puts "#{object.key}\t#{object.about['content-length']}\t#{object.about['last-modified']}"
+    # end
+
+    s3_service = connect_s3_service
+    bucket = s3_service.buckets[options[:bucket]]
+
+    print "Listing \"#{prefix}*.#{file_extension}\" from bucket \"#{options[:bucket]}\"..."
+
+    files = []
+    bucket.objects.with_prefix(prefix).each(:limit => 1000) do |obj|
+      if file_extension == '*' || obj.key.end_with?(".#{file_extension}")
+        files << obj.key
+      end
+    end
+    puts 'done.'
+    files
   end
 
   def delete_file file_name
-    #TODO
+    bucket = s3_service.buckets[options[:bucket]]
+    print "Deleting file \"#{file_name}\" from bucket \"#{options[:bucket]}\"..."
+    bucket.objects[file_name].delete
+    puts 'done.'
   end
 
   private

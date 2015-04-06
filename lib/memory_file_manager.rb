@@ -14,8 +14,8 @@ class MemoryFileManager
     @data["#{file_name}"] = file_contents.to_s
   end
 
-  def list_files
-    @data.keys
+  def list_files(prefix = '', file_extension = '*')
+    @data.keys.select{|key| key.start_with?(prefix) && key.end_with?(".#{file_extension}")}
   end
 
   def delete_file file_name
