@@ -1,11 +1,7 @@
 require './test/test_helper'
 require 'memory_file_manager'
 
-class MemoryFileManagerTest < Minitest::Test
-  def setup
-    @manager = MemoryFileManager.new({})
-  end
-
+module FileManagerTest
   def test_reading
     assert_nil @manager.read_file 'not_saved'
 
@@ -27,6 +23,14 @@ class MemoryFileManagerTest < Minitest::Test
 
     @manager.delete_file 'saved.*'
     assert_empty @manager.list_files
+  end
+end
+
+class MemoryFileManagerTest < Minitest::Test
+  include FileManagerTest
+  
+  def setup
+    @manager = MemoryFileManager.new({})
   end
 
 end
