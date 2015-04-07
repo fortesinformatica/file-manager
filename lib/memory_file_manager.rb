@@ -1,8 +1,9 @@
-class MemoryFileManager
-  attr_accessor :options
+require 'file_manager'
+
+class MemoryFileManager < FileManager
 
   def initialize(options)
-    @options = options
+    super
     @data = {}
   end
 

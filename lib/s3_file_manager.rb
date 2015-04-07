@@ -1,11 +1,7 @@
+require 'file_manager'
 require 'aws-sdk'
 
-class S3FileManager
-  attr_accessor :options
-
-  def initialize(options)
-    @options = options
-  end
+class S3FileManager < FileManager
 
   def read_file file_name
     s3_service = connect_s3_service
