@@ -5,19 +5,25 @@ class S3FileManager < FileManager
 
   def read_file file_name
     s3_service = connect_s3_service
-    bucket = s3_service.buckets[options[:bucket]]
+    bucket = s3_service.buckets[bucket_name]
 
-    print "Reading file \"#{file_name}\" from bucket \"#{options[:bucket]}\"..."
+    print "Reading file \"#{file_name}\" from bucket \"#{bucket_name}\"..."
     contents = bucket.objects[file_name].read.force_encoding('utf-8')
     puts 'done.'
 
     contents
+  rescue AWS::S3::Errors::NoSuchKey
+    raise FileNotFoundError.new("#{bucket_name}/#{file_name}")
+  end
+
+  def bucket_name
+    options.fetch(:bucket)
   end
 
   def save_file(file_name, file_contents, write_options = {})
-    print "Saving file \"#{file_name}\" to bucket \"#{options[:bucket]}\"..."
+    print "Saving file \"#{file_name}\" to bucket \"#{bucket_name}\"..."
     s3_service = connect_s3_service
-    bucket = s3_service.buckets[options[:bucket]]
+    bucket = s3_service.buckets[bucket_name]
 
     bucket.objects["#{file_name}"].write(file_contents.to_s, write_options)
     puts 'done.'
@@ -38,9 +44,9 @@ class S3FileManager < FileManager
     # end
 
     s3_service = connect_s3_service
-    bucket = s3_service.buckets[options[:bucket]]
+    bucket = s3_service.buckets[bucket_name]
 
-    print "Listing \"#{prefix}*.#{file_extension}\" from bucket \"#{options[:bucket]}\"..."
+    print "Listing \"#{prefix}*.#{file_extension}\" from bucket \"#{bucket_name}\"..."
 
     files = []
     bucket.objects.with_prefix(prefix).each(:limit => 1000) do |obj|
@@ -53,8 +59,9 @@ class S3FileManager < FileManager
   end
 
   def delete_file file_name
-    bucket = s3_service.buckets[options[:bucket]]
-    print "Deleting file \"#{file_name}\" from bucket \"#{options[:bucket]}\"..."
+    s3_service = connect_s3_service
+    bucket = s3_service.buckets[bucket_name]
+    print "Deleting file \"#{file_name}\" from bucket \"#{bucket_name}\"..."
     bucket.objects[file_name].delete
     puts 'done.'
   end

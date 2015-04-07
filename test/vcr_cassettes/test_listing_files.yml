@@ -1,0 +1,705 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://file-manager-tests.s3.amazonaws.com/?max-keys=1000&prefix=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:07 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:Pax0oRUINW54978RmDlTcJN1xMA=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      X-Amz-Request-Id:
+      - 58F8D9B48B74FA4C
+      X-Amz-Id-2:
+      - s9crium3aQM2G/F6d7nqzWkGqzH63lYR6iofKlUn894GCzFSRJnVRYoR5y78Sggo1kYGZUoCiEA=
+      Location:
+      - https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 07 Apr 2015 18:01:55 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Bucket>file-manager-tests</Bucket><Endpoint>file-manager-tests.s3-us-west-2.amazonaws.com</Endpoint><RequestId>58F8D9B48B74FA4C</RequestId><HostId>s9crium3aQM2G/F6d7nqzWkGqzH63lYR6iofKlUn894GCzFSRJnVRYoR5y78Sggo1kYGZUoCiEA=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:07 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:08 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:7bDZ4pTHfafvRnynd2Z3NJgbzlw=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - Oq+rFl6+/FinYVxO9ePMb5WXSYub9rkReHJMGycSDcbwqGQNvwUR/ylZstRdordE5PEAvSIlVUk=
+      X-Amz-Request-Id:
+      - 5E0381046C106D51
+      Date:
+      - Tue, 07 Apr 2015 18:01:57 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:08 GMT
+- request:
+    method: put
+    uri: https://file-manager-tests.s3.amazonaws.com/saved.*
+    body:
+      encoding: ASCII-8BIT
+      string: content
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      Content-Length:
+      - '7'
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:08 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:3a8qIXhfl2Ymu8eLpvDYin4iTFk=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      X-Amz-Request-Id:
+      - 7C144466D92E6CED
+      X-Amz-Id-2:
+      - 9ujciJOGN4SoN6/AqASt3BBz36X5F8fXRhDVQMLa9JN2LK6bwSXXZW8eXMzRH8FG0EKXhZKAuew=
+      Location:
+      - https://file-manager-tests.s3-us-west-2.amazonaws.com/saved.%2A
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 07 Apr 2015 18:01:56 GMT
+      Connection:
+      - close
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Bucket>file-manager-tests</Bucket><Endpoint>file-manager-tests.s3-us-west-2.amazonaws.com</Endpoint><RequestId>7C144466D92E6CED</RequestId><HostId>9ujciJOGN4SoN6/AqASt3BBz36X5F8fXRhDVQMLa9JN2LK6bwSXXZW8eXMzRH8FG0EKXhZKAuew=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:09 GMT
+- request:
+    method: put
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/saved.*
+    body:
+      encoding: ASCII-8BIT
+      string: content
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      Content-Length:
+      - '7'
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:09 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:bOg31Rov41FtFev5ZjQC48BZ3Qg=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - vYjUtL6t+HHpeOksQZL5Aj8FKf7sXzc/E0pDZRlxHlZGAaQgbFBcbJxnbVr5odflu8PfdLltI5s=
+      X-Amz-Request-Id:
+      - 7C7CF698DE8B4FEE
+      Date:
+      - Tue, 07 Apr 2015 18:01:58 GMT
+      Etag:
+      - '"9a0364b9e99bb480dd25e1f0284c8555"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:10 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3.amazonaws.com/?max-keys=1000&prefix=other_prefix
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:10 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:mzmf3IA2weK3e+O2sirYJNMdk4c=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      X-Amz-Request-Id:
+      - DAE55D3E61957D02
+      X-Amz-Id-2:
+      - qS1vAb1WHQL3TIKJLybx9nrHzMQNmrIKb9xpIUH1Cmt2zB3zGpS8Z37duwufqHb7GBYImGBIVR4=
+      Location:
+      - https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=other_prefix
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 07 Apr 2015 18:01:57 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Bucket>file-manager-tests</Bucket><Endpoint>file-manager-tests.s3-us-west-2.amazonaws.com</Endpoint><RequestId>DAE55D3E61957D02</RequestId><HostId>qS1vAb1WHQL3TIKJLybx9nrHzMQNmrIKb9xpIUH1Cmt2zB3zGpS8Z37duwufqHb7GBYImGBIVR4=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:10 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=other_prefix
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:11 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:erpaUDm/pbShtdTDCmxj0GgE5fc=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - n0U/af44ylEbZ8H29yQK221AZOqQXEhl4AynkvW6/2xv87LQlMOGrgUZ0j/jZ/8qjNlo/VXpBhA=
+      X-Amz-Request-Id:
+      - CEC19FC940DCA2F9
+      Date:
+      - Tue, 07 Apr 2015 18:02:00 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>other_prefix</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:11 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3.amazonaws.com/?max-keys=1000&prefix=sav
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:11 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:erpaUDm/pbShtdTDCmxj0GgE5fc=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      X-Amz-Request-Id:
+      - AE0138D4C0A88A23
+      X-Amz-Id-2:
+      - aBl680XsjTh/fkiDytqGdRRC38d/bOKrhyf5NRLmy/u1YHbYeeru8Z5utyPaCRfmGPFAvtszecg=
+      Location:
+      - https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=sav
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 07 Apr 2015 18:01:59 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Bucket>file-manager-tests</Bucket><Endpoint>file-manager-tests.s3-us-west-2.amazonaws.com</Endpoint><RequestId>AE0138D4C0A88A23</RequestId><HostId>aBl680XsjTh/fkiDytqGdRRC38d/bOKrhyf5NRLmy/u1YHbYeeru8Z5utyPaCRfmGPFAvtszecg=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:12 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=sav
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:12 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:gJLH6rlj5BaOBNQ5WR4FR0k/idk=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - "//r0z7pscAX1EWtqFEwhQxEvdZzPEWMGlFRajjaL2w5az0AF+09JIfFBtAcaFOSL7j3/uZ7/nHY="
+      X-Amz-Request-Id:
+      - BBAA1F625EDE1059
+      Date:
+      - Tue, 07 Apr 2015 18:02:01 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>sav</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2015-04-07T18:01:58.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><Owner><ID>93aef73ec9e2412194b36d6a763c119d46a9f0b0cf053130937741f42856242c</ID><DisplayName>desenvolvimento.bedel</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:13 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3.amazonaws.com/?max-keys=1000&prefix=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:13 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:sqxGvkMYsGRU/wPit6P+mCilQPA=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      X-Amz-Request-Id:
+      - F3D8266DC42217CA
+      X-Amz-Id-2:
+      - IQu9n2ek1vPa1F7sIA/3Hvo5l2bDFvZx80SabXMMHMe+QWNNy1MFNr6zV4aNqvR/twpM3991xsY=
+      Location:
+      - https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 07 Apr 2015 18:02:00 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Bucket>file-manager-tests</Bucket><Endpoint>file-manager-tests.s3-us-west-2.amazonaws.com</Endpoint><RequestId>F3D8266DC42217CA</RequestId><HostId>IQu9n2ek1vPa1F7sIA/3Hvo5l2bDFvZx80SabXMMHMe+QWNNy1MFNr6zV4aNqvR/twpM3991xsY=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:13 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:14 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:3yPv2LBEkAWBNW4TcvlDQX7P9iE=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - I3Ev6sWp+oohiN8OQatqfe1bupnvuBXrd3AcXDW8iyW87xg0RPss3RcsCl/Ibuh9ueBT7spqwIA=
+      X-Amz-Request-Id:
+      - 774315C82ECD8F8D
+      Date:
+      - Tue, 07 Apr 2015 18:02:03 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2015-04-07T18:01:58.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><Owner><ID>93aef73ec9e2412194b36d6a763c119d46a9f0b0cf053130937741f42856242c</ID><DisplayName>desenvolvimento.bedel</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:14 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3.amazonaws.com/?max-keys=1000&prefix=sav
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:14 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:3yPv2LBEkAWBNW4TcvlDQX7P9iE=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      X-Amz-Request-Id:
+      - 5205D5B3DED9755D
+      X-Amz-Id-2:
+      - kVn6QC7JM1nzP0LWX/JZGcTvWJN1teeBPKqYARfx0LViMh5ShMw1WFIiqLXlLmb6YxR9fH9UWr4=
+      Location:
+      - https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=sav
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 07 Apr 2015 18:02:03 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Bucket>file-manager-tests</Bucket><Endpoint>file-manager-tests.s3-us-west-2.amazonaws.com</Endpoint><RequestId>5205D5B3DED9755D</RequestId><HostId>kVn6QC7JM1nzP0LWX/JZGcTvWJN1teeBPKqYARfx0LViMh5ShMw1WFIiqLXlLmb6YxR9fH9UWr4=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:15 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=sav
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:15 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:VTj0P5IosFZRWiHI6N59MFBTDrg=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - n813kF1xLzRc2DCmvcNaT/iVUIpFtmJCVz556nO9bl1a/1IG7RVxuNdDMeGuUS9vQwzt6+bVxbM=
+      X-Amz-Request-Id:
+      - 47F2B7973007163B
+      Date:
+      - Tue, 07 Apr 2015 18:02:04 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>sav</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2015-04-07T18:01:58.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><Owner><ID>93aef73ec9e2412194b36d6a763c119d46a9f0b0cf053130937741f42856242c</ID><DisplayName>desenvolvimento.bedel</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:16 GMT
+- request:
+    method: delete
+    uri: https://file-manager-tests.s3.amazonaws.com/saved.*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:16 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:G53qpfarDvcd1d4Q8zIE9zo/Qp8=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      X-Amz-Request-Id:
+      - 63B1C9A30E0A9FCC
+      X-Amz-Id-2:
+      - LDWlONJUlL/D7a5sJawhuTHLPXFL+PVjA5mHM+ejcHkGTQ7BBGx9Bw3fgU5eBMVPIvA5wWk7mls=
+      Location:
+      - https://file-manager-tests.s3-us-west-2.amazonaws.com/saved.%2A
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 07 Apr 2015 18:02:03 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Bucket>file-manager-tests</Bucket><Endpoint>file-manager-tests.s3-us-west-2.amazonaws.com</Endpoint><RequestId>63B1C9A30E0A9FCC</RequestId><HostId>LDWlONJUlL/D7a5sJawhuTHLPXFL+PVjA5mHM+ejcHkGTQ7BBGx9Bw3fgU5eBMVPIvA5wWk7mls=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:16 GMT
+- request:
+    method: delete
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/saved.*
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:17 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:l84H2fRx8DJG0RrizAiz5ljt2Pg=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Amz-Id-2:
+      - ApCeYPOXsEO4U85+UZk+YPf0GWJo/eWUniX/aKg8u5RI9Do5yj3OOtVLrUh7ruMugHQVPExmAHk=
+      X-Amz-Request-Id:
+      - 64B0D35D3A537272
+      Date:
+      - Tue, 07 Apr 2015 18:02:06 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:17 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3.amazonaws.com/?max-keys=1000&prefix=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:17 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:h2dpHLj7LBEi5QNDApFMeRkvMYc=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 307
+      message: Temporary Redirect
+    headers:
+      X-Amz-Request-Id:
+      - 187A42D8FE6A6DC5
+      X-Amz-Id-2:
+      - VJoTZNaCCG3ZdxuzJDgDZMq4Vy+NI6EafJXfAdit14hujvCRsq0GivpA/Z1K5Vg5S1y39i46dRk=
+      Location:
+      - https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 07 Apr 2015 18:02:05 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>TemporaryRedirect</Code><Message>Please re-send this request to the specified temporary endpoint. Continue to use the original request endpoint for future requests.</Message><Bucket>file-manager-tests</Bucket><Endpoint>file-manager-tests.s3-us-west-2.amazonaws.com</Endpoint><RequestId>187A42D8FE6A6DC5</RequestId><HostId>VJoTZNaCCG3ZdxuzJDgDZMq4Vy+NI6EafJXfAdit14hujvCRsq0GivpA/Z1K5Vg5S1y39i46dRk=</HostId></Error>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:18 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/?max-keys=1000&prefix=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby/1.52.0 ruby/2.2.1 x86_64-darwin14
+      Date:
+      - Tue, 07 Apr 2015 18:01:18 GMT
+      Authorization:
+      - AWS AKIAJ73G6IOWSUPCKP5A:AeC3EYpal8W7UBsvI4XtAGc82aw=
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - Zow/b+PjC+YFoGsXzW2V+/6L+BAiKUNvQ8aB525HqGGCiuwRDFNu4R/Zg/j4tSY3/+tXLEjkmJY=
+      X-Amz-Request-Id:
+      - 1FD4FDBB34E2D339
+      Date:
+      - Tue, 07 Apr 2015 18:02:07 GMT
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 07 Apr 2015 18:01:19 GMT
+recorded_with: VCR 2.9.3
