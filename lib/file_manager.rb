@@ -39,3 +39,6 @@ class FileManager
   end
 
 end
+
+class FileNotFoundError < StandardError
+end

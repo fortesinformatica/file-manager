@@ -8,7 +8,7 @@ class MemoryFileManager < FileManager
   end
 
   def read_file file_name
-    @data["#{file_name}"]
+    @data["#{file_name}"] || (raise FileNotFoundError.new("No such file '#{file_name}'"))
   end
 
   def save_file(file_name, file_contents, write_options = {})

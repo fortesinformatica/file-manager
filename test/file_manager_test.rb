@@ -3,13 +3,13 @@ require 'memory_file_manager'
 
 module FileManagerTest
   def test_reading
-    assert_nil @manager.read_file 'not_saved'
+    assert_raises(FileNotFoundError) { @manager.read_file 'not_saved' }
 
     @manager.save_file 'saved', 'content'
     assert_equal 'content', @manager.read_file('saved')
 
     @manager.delete_file 'saved'
-    assert_nil @manager.read_file 'saved'
+    assert_raises(FileNotFoundError) { @manager.read_file 'saved' }
   end
 
   def test_listing_files
