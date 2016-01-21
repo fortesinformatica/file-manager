@@ -7,9 +7,9 @@ class S3FileManager < FileManager
     s3_service = connect_s3_service
     bucket = s3_service.buckets[bucket_name]
 
-    print "Reading file \"#{file_name}\" from bucket \"#{bucket_name}\"..."
+    logger.print "Reading file \"#{file_name}\" from bucket \"#{bucket_name}\"..."
     contents = bucket.objects[file_name].read.force_encoding('utf-8')
-    puts 'done.'
+    logger.puts 'done.'
 
     contents
   rescue AWS::S3::Errors::NoSuchKey
@@ -21,12 +21,12 @@ class S3FileManager < FileManager
   end
 
   def save_file(file_name, file_contents, write_options = {})
-    print "Saving file \"#{file_name}\" to bucket \"#{bucket_name}\"..."
+    logger.print "Saving file \"#{file_name}\" to bucket \"#{bucket_name}\"..."
     s3_service = connect_s3_service
     bucket = s3_service.buckets[bucket_name]
 
     bucket.objects["#{file_name}"].write(file_contents.to_s, write_options)
-    puts 'done.'
+    logger.puts 'done.'
   end
 
   def list_files(prefix = '', file_extension = '*')
@@ -46,7 +46,7 @@ class S3FileManager < FileManager
     s3_service = connect_s3_service
     bucket = s3_service.buckets[bucket_name]
 
-    print "Listing \"#{prefix}*.#{file_extension}\" from bucket \"#{bucket_name}\"..."
+    logger.print "Listing \"#{prefix}*.#{file_extension}\" from bucket \"#{bucket_name}\"..."
 
     files = []
     bucket.objects.with_prefix(prefix).each(:limit => 1000) do |obj|
@@ -54,22 +54,22 @@ class S3FileManager < FileManager
         files << obj.key
       end
     end
-    puts 'done.'
+    logger.puts 'done.'
     files
   end
 
   def delete_file file_name
     s3_service = connect_s3_service
     bucket = s3_service.buckets[bucket_name]
-    print "Deleting file \"#{file_name}\" from bucket \"#{bucket_name}\"..."
+    logger.print "Deleting file \"#{file_name}\" from bucket \"#{bucket_name}\"..."
     bucket.objects[file_name].delete
-    puts 'done.'
+    logger.puts 'done.'
   end
 
   private
 
   def connect_s3_service
-    print "Accessing S3 service..."
+    logger.print "Accessing S3 service..."
 
     AWS.config(
         :access_key_id => options[:access_key_id],
@@ -77,7 +77,7 @@ class S3FileManager < FileManager
     )
 
     service = AWS::S3.new
-    puts 'done.'
+    logger.puts 'done.'
     service
   end
 

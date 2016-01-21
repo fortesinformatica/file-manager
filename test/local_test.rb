@@ -5,7 +5,7 @@ class LocalFileManagerTest < Minitest::Test
   include FileManagerTest
 
   def setup
-    @manager = LocalFileManager.new({root_path: Dir.mktmpdir})
+    @manager = LocalFileManager.new({root_path: Dir.mktmpdir + '/root_path/', silent: true})
   end
 
 end

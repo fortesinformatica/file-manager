@@ -23,6 +23,10 @@ class FileManager
     raise 'Not implemented!'
   end
 
+  private
+
+  attr_reader :logger
+
   class Logger
 
     def initialize options

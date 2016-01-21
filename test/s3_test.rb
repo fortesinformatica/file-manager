@@ -13,7 +13,7 @@ class S3FileManagerTest < Minitest::Test
   end
 
   def setup
-    @manager = S3FileManager.new({bucket: 'file-manager-tests'})
+    @manager = S3FileManager.new({bucket: 'file-manager-tests', silent: true})
   end
 
 end
