@@ -1,3 +1,4 @@
+require 'pathname'
 require 'fileutils'
 require 'file_manager'
 
@@ -16,8 +17,8 @@ class LocalFileManager < FileManager
 
   def save_file(file_name, file_contents, write_options = {})
     @logger.print "Saving file \"#{file_name}\" to local folder \"#{root_path}\"..."
-    full_file_name = File.join(root_path, file_name)
-    FileUtils.mkdir_p(root_path)
+    full_file_name = Pathname(File.join(root_path, file_name))
+    FileUtils.mkdir_p(full_file_name.dirname)
     File.open(full_file_name, 'wb') { |f| f.write(file_contents) }
     @logger.puts 'done.'
   end
@@ -25,7 +26,10 @@ class LocalFileManager < FileManager
   def list_files(prefix = '', file_extension = '*')
     FileUtils.mkdir_p(root_path)
     @logger.print "Listing \"#{prefix}*.#{file_extension}\" from local folder \"#{root_path}\"..."
-    files = Dir["#{root_path}/#{prefix}*.#{file_extension}"].map{|f| File.basename(f)}
+    files = Dir[File.join(root_path, '**', prefix, "*.#{file_extension}"),
+                File.join(root_path, "#{prefix}*.#{file_extension}")].map do |f|
+      f[root_path.size..-1]
+    end.uniq
     @logger.puts 'done.'
     files
   end
