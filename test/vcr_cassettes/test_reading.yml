@@ -12,49 +12,48 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin15
+      - aws-sdk-ruby2/2.2.13 jruby/1.9.3 java
       X-Amz-Date:
-      - 20160128T193534Z
+      - 20160128T205052Z
       Host:
       - file-manager-tests.s3-us-west-2.amazonaws.com
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=93e1c7b13878fd3088d886c51569a96344c2deaec0d0735560d6126d2faa5636
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=1cc1231e74aa9cd3ee68c800d95f3be58a1a76a31ee5f9b96cf5e6d1711060c1
       Content-Length:
       - '0'
       Accept:
-      - "*/*"
+      - '*/*'
   response:
     status:
       code: 404
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - 1381BACA1293306F
+      - E3B997159C642BE6
       X-Amz-Id-2:
-      - ju9z+M3Gt5HDFfA7efZZdHFTKUHnd/k72g8AHR1ZiJGfA7q4ot96p8vBWBt43admYh4Ve32cp0w=
+      - kQbrxTK8nrBdoX1ETsUwVkOOHF3EVtMo/Cwu9qK5hwx4g2Wa+G9Z5ptRjfSHUWAjPFUYPITRJyc=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 28 Jan 2016 19:35:36 GMT
+      - Thu, 28 Jan 2016 20:50:53 GMT
       Server:
       - AmazonS3
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>not_saved</Key><RequestId>1381BACA1293306F</RequestId><HostId>ju9z+M3Gt5HDFfA7efZZdHFTKUHnd/k72g8AHR1ZiJGfA7q4ot96p8vBWBt43admYh4Ve32cp0w=</HostId></Error>
-    http_version: 
-  recorded_at: Thu, 28 Jan 2016 19:35:35 GMT
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>not_saved</Key><RequestId>E3B997159C642BE6</RequestId><HostId>kQbrxTK8nrBdoX1ETsUwVkOOHF3EVtMo/Cwu9qK5hwx4g2Wa+G9Z5ptRjfSHUWAjPFUYPITRJyc=</HostId></Error>
+    http_version:
+  recorded_at: Thu, 28 Jan 2016 20:50:53 GMT
 - request:
     method: put
     uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/saved
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: content
     headers:
       Content-Type:
@@ -62,35 +61,34 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin15
+      - aws-sdk-ruby2/2.2.13 jruby/1.9.3 java
       Expect:
       - 100-continue
       Content-Md5:
       - mgNkuembtIDdJeHwKEyFVQ==
       X-Amz-Date:
-      - 20160128T193535Z
+      - 20160128T205053Z
       Host:
       - file-manager-tests.s3-us-west-2.amazonaws.com
       X-Amz-Content-Sha256:
       - ed7002b439e9ac845f22357d822bac1444730fbdb6016d3ec9432297b9ec9f73
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request,
-        SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=6738efc49b77729f7b57e9e8227e533e1b59692eca954877f346fcf305206cbe
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request, SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=7ceae33a875291320ee3c80191ba17979fb4072e0a0aee22de456e6a9ce3cbaa
       Content-Length:
       - '7'
       Accept:
-      - "*/*"
+      - '*/*'
   response:
     status:
       code: 200
       message: OK
     headers:
       X-Amz-Id-2:
-      - 7VXY2ofiCBv/Hh+eCR+hkOZ0+oJ9ANGMuGrM6TYPyfE9M4hO6hgDx78+zuBad5iJ+rgI90AguzY=
+      - EM+i5VRrX8sT+/99Qhd0jc8opENAs8Zs7NgnPL5PWa6iqPdksIOxdplHt8DZZ5P8dEmwFKGOcPc=
       X-Amz-Request-Id:
-      - B1307A37B4458A89
+      - 533A0BD9D8F13EE2
       Date:
-      - Thu, 28 Jan 2016 19:35:39 GMT
+      - Thu, 28 Jan 2016 20:50:58 GMT
       Etag:
       - '"9a0364b9e99bb480dd25e1f0284c8555"'
       Content-Length:
@@ -98,10 +96,10 @@ http_interactions:
       Server:
       - AmazonS3
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    http_version: 
-  recorded_at: Thu, 28 Jan 2016 19:35:36 GMT
+    http_version:
+  recorded_at: Thu, 28 Jan 2016 20:50:57 GMT
 - request:
     method: get
     uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/saved
@@ -114,33 +112,32 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin15
+      - aws-sdk-ruby2/2.2.13 jruby/1.9.3 java
       X-Amz-Date:
-      - 20160128T193536Z
+      - 20160128T205057Z
       Host:
       - file-manager-tests.s3-us-west-2.amazonaws.com
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=8894e47cac7a1cbdb36800ecf2c37280d8bca59159b0054a33b158b65ec4476c
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=d38779defbd8cc3e22ef21c8a4bd7f374bda416dfa305ab0090935c6407300c4
       Content-Length:
       - '0'
       Accept:
-      - "*/*"
+      - '*/*'
   response:
     status:
       code: 200
       message: OK
     headers:
       X-Amz-Id-2:
-      - ntvzL9XDPbPTFt+qufQRxURka8k+NX0o8VXKoY+67myssWOiDTwXnq1PK/8fPkJLJbaU9Iy+i6U=
+      - uGmTutIAiW3l7sGxdwwhF2mHrVtE3CO7dPv/lmaMVNQKQjO6fEtNknkJfS7LjhIovRnqb6ttKY8=
       X-Amz-Request-Id:
-      - 3287E524B6003DC1
+      - 78C249698DED37F6
       Date:
-      - Thu, 28 Jan 2016 19:35:40 GMT
+      - Thu, 28 Jan 2016 20:50:59 GMT
       Last-Modified:
-      - Thu, 28 Jan 2016 19:35:39 GMT
+      - Thu, 28 Jan 2016 20:50:58 GMT
       Etag:
       - '"9a0364b9e99bb480dd25e1f0284c8555"'
       Accept-Ranges:
@@ -152,10 +149,10 @@ http_interactions:
       Server:
       - AmazonS3
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: content
-    http_version: 
-  recorded_at: Thu, 28 Jan 2016 19:35:37 GMT
+    http_version:
+  recorded_at: Thu, 28 Jan 2016 20:50:58 GMT
 - request:
     method: delete
     uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/saved
@@ -168,38 +165,37 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin15
+      - aws-sdk-ruby2/2.2.13 jruby/1.9.3 java
       X-Amz-Date:
-      - 20160128T193537Z
+      - 20160128T205058Z
       Host:
       - file-manager-tests.s3-us-west-2.amazonaws.com
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=caab8d3ebbae3cffd29f1473f9943a0ddccafbbaa466ebe80e0ead7b42653916
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=dd0ef9607ff42f02fe9b828df5575bb7ceba0db8b8f89d8c73ad8934eafe5eff
       Content-Length:
       - '0'
       Accept:
-      - "*/*"
+      - '*/*'
   response:
     status:
       code: 204
       message: No Content
     headers:
       X-Amz-Id-2:
-      - 2L59/oZZ1dAnITepCrLd9LvYkpmeLQoOL0EUriI/270prdVdnH6XZf/87GdiyvwfERiqgBfF9ic=
+      - K+ldQfamuEEW7yIZG5fGsFktVrfayLtsOlvsmDsya6jQk0cRo2+MjX2aypNaUZyeP4422kKIPZ4=
       X-Amz-Request-Id:
-      - A817FDE1AE49139E
+      - 9807C70F00147667
       Date:
-      - Thu, 28 Jan 2016 19:35:41 GMT
+      - Thu, 28 Jan 2016 20:51:00 GMT
       Server:
       - AmazonS3
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
-    http_version: 
-  recorded_at: Thu, 28 Jan 2016 19:35:38 GMT
+    http_version:
+  recorded_at: Thu, 28 Jan 2016 20:50:59 GMT
 - request:
     method: get
     uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/saved
@@ -212,42 +208,41 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin15
+      - aws-sdk-ruby2/2.2.13 jruby/1.9.3 java
       X-Amz-Date:
-      - 20160128T193538Z
+      - 20160128T205059Z
       Host:
       - file-manager-tests.s3-us-west-2.amazonaws.com
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=ea7d048141eb671a29052812573e6d25b9dbf6d80ed4adf54189e10c6cd08ecd
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160128/us-west-2/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=89e5bb509de763baf62f4db3ad00f1061323b9ac0ecb74128597a0352ac6c0a6
       Content-Length:
       - '0'
       Accept:
-      - "*/*"
+      - '*/*'
   response:
     status:
       code: 404
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - 2332BC9FAAD2C611
+      - 0BD6ADEEC877BFD2
       X-Amz-Id-2:
-      - u0Hq9bCMLFaOjaM2eXG3LBRuSE3FiSXRONb82Rl0ayuns5LPUsF4dtUN7kURPuDwQZxybObsYQA=
+      - W1b/3+hjTi83sf/cyxILWbAz2fmtqSiOEDzCiPS9HkZkI72pjGGhWbIikRI+ji25wk0C8PxmiX4=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 28 Jan 2016 19:35:40 GMT
+      - Thu, 28 Jan 2016 20:50:59 GMT
       Server:
       - AmazonS3
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>saved</Key><RequestId>2332BC9FAAD2C611</RequestId><HostId>u0Hq9bCMLFaOjaM2eXG3LBRuSE3FiSXRONb82Rl0ayuns5LPUsF4dtUN7kURPuDwQZxybObsYQA=</HostId></Error>
-    http_version: 
-  recorded_at: Thu, 28 Jan 2016 19:35:39 GMT
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>saved</Key><RequestId>0BD6ADEEC877BFD2</RequestId><HostId>W1b/3+hjTi83sf/cyxILWbAz2fmtqSiOEDzCiPS9HkZkI72pjGGhWbIikRI+ji25wk0C8PxmiX4=</HostId></Error>
+    http_version:
+  recorded_at: Thu, 28 Jan 2016 20:51:00 GMT
 recorded_with: VCR 3.0.1

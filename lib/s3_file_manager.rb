@@ -73,8 +73,7 @@ class S3FileManager < FileManager
     logger.print "Accessing S3 service..."
 
     credentials = Aws::Credentials.new(options[:access_key_id], options[:secret_access_key])
-
-    client = Aws::S3::Client.new(region:'us-west-2', credentials: credentials)
+    client      = Aws::S3::Client.new(region: options[:region], credentials: credentials)
 
     service = Aws::S3::Resource.new(client: client)
     logger.puts 'done.'
