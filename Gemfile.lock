@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    file-manager (0.0.12)
+    file-manager (0.1.0)
       aws-sdk (= 2.2.13)
 
 GEM
