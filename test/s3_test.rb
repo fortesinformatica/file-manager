@@ -13,7 +13,12 @@ class S3FileManagerTest < Minitest::Test
   end
 
   def setup
-    @manager = S3FileManager.new({bucket: 'file-manager-tests', silent: true})
+    @manager = S3FileManager.new(
+        access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+        bucket: 'file-manager-tests',
+        silent: true,
+    )
   end
 
 end
