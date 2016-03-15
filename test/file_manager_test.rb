@@ -47,4 +47,9 @@ module FileManagerTest
     @manager.delete_file 'sub_dir/saved.*'
     assert_empty @manager.list_files
   end
+
+  def test_remove_not_existing_file_dont_raise
+    assert_empty @manager.list_files
+    @manager.delete_file 'sub_dir/saved.*'
+  end
 end

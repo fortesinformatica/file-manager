@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/?encoding-type=url&prefix=
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.13 ruby/2.2.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20160315T144426Z
+      Host:
+      - file-manager-tests.s3-us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160315/us-west-2/s3/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=0023659177858c0e7c7054fa1d6f2f02ef7d24fccca80a69524645a184bcccee
+      Content-Length:
+      - '0'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - KRb32ptkmt1QyWMS/4vvMxG6Qa6P1yLR5ys6mjuNHSoiiEbuQnYKN+ZCb+fo3/2BtuRc3xamfcw=
+      X-Amz-Request-Id:
+      - 363118D71D6CB915
+      Date:
+      - Tue, 15 Mar 2016 14:44:27 GMT
+      X-Amz-Bucket-Region:
+      - us-west-2
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Tue, 15 Mar 2016 14:44:26 GMT
+- request:
+    method: delete
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/sub_dir/saved.*
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.13 ruby/2.2.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20160315T144426Z
+      Host:
+      - file-manager-tests.s3-us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20160315/us-west-2/s3/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=6272ce8fae73f537d3b811d3a4dff931defbb1cc0c028641ca315d5ae7e69ad1
+      Content-Length:
+      - '0'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Amz-Id-2:
+      - p4vWQOuTk3MoDRzlPPCLAEjJE+1rnU2/Xb9heUedHXh9q+EJgykS3xzwcU6I1F+lyLlOAyp/wpU=
+      X-Amz-Request-Id:
+      - 90A37943546437B4
+      Date:
+      - Tue, 15 Mar 2016 14:44:41 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 15 Mar 2016 14:44:40 GMT
+recorded_with: VCR 3.0.1
