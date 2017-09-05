@@ -23,4 +23,13 @@ class MemoryFileManager < FileManager
     @data.delete "#{file_name}"
   end
 
+  def download_to_temp_file(file_name)
+    Dir.mktmpdir do |dir|
+      temp_file = "#{dir}/#{Pathname(file_name).basename}"
+      content = read_file(file_name)
+      File.open(temp_file, 'w') { |file| file.write(content) }
+      yield(temp_file)
+    end
+  end
+
 end

@@ -30,6 +30,19 @@ class S3FileManager < FileManager
     logger.puts 'done.'
   end
 
+  def download_to_temp_file(file_name)
+    Dir.mktmpdir do |dir|
+      @logger.print "Downloading file \"#{bucket_name}/#{file_name}\" to temp folder \"#{dir}\"..."
+      temp_file = "#{dir}/#{Pathname(file_name).basename}"
+
+      s3_client = connect_s3_client
+      s3_client.get_object({ bucket: bucket_name, key: file_name }, target: temp_file)
+
+      yield(temp_file)
+    end
+    logger.puts 'done.'
+  end
+
   def list_files(prefix = '', file_extension = '*')
     # objects = []
     # last_key = nil
@@ -78,6 +91,11 @@ class S3FileManager < FileManager
     service = Aws::S3::Resource.new(client: client)
     logger.puts 'done.'
     service
+  end
+
+  def connect_s3_client
+    credentials = Aws::Credentials.new(options[:access_key_id], options[:secret_access_key])
+    Aws::S3::Client.new(region: options[:region], credentials: credentials)
   end
 
 end

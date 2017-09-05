@@ -23,6 +23,17 @@ class LocalFileManager < FileManager
     @logger.puts 'done.'
   end
 
+  def download_to_temp_file(file_name)
+    @logger.print "Copying local file \"#{file_name}\" to folder \"#{root_path}\"..."
+    full_file_name = Pathname(File.join(root_path, file_name))
+    Dir.mktmpdir do |dir|
+      temp_file = "#{dir}/#{full_file_name.basename}"
+      FileUtils.cp(full_file_name, temp_file)
+      yield(temp_file)
+    end
+    @logger.puts 'done.'
+  end
+
   def list_files(prefix = '', file_extension = '*')
     FileUtils.mkdir_p(root_path)
     @logger.print "Listing \"#{prefix}*.#{file_extension}\" from local folder \"#{root_path}\"..."

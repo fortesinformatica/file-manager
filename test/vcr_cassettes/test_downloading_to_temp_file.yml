@@ -1,0 +1,207 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/temp_file/saved
+    body:
+      encoding: UTF-8
+      string: content
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - mgNkuembtIDdJeHwKEyFVQ==
+      X-Amz-Date:
+      - 20170905T193111Z
+      Host:
+      - file-manager-tests.s3-us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - ed7002b439e9ac845f22357d822bac1444730fbdb6016d3ec9432297b9ec9f73
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
+        SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=77b5ca0c733dca9e50fa94641c075eb003cc5f48828806021d91383003b121c2
+      Content-Length:
+      - '7'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - ThrCrHLPq67iKa3zU+BSgqEJ9qqNz636LiISvezfUKVARKmV+3mE400nDn0IEVEKdrB5CKgKBIg=
+      X-Amz-Request-Id:
+      - EA7AABC0E1F7C52C
+      Date:
+      - Tue, 05 Sep 2017 19:31:12 GMT
+      Etag:
+      - '"9a0364b9e99bb480dd25e1f0284c8555"'
+      Content-Length:
+      - '0'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 05 Sep 2017 19:31:12 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/temp_file/saved
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
+      X-Amz-Date:
+      - 20170905T193112Z
+      Host:
+      - file-manager-tests.s3-us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=d77b195464c76daf6a4e0c2d081e9011886a7fe30d5e9eba1fb80bb77568a8fe
+      Content-Length:
+      - '0'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - 9UJ3/6AVPXQ6SLEYwc/+TMoZq0yszEhK1qi8ACLAvyeC8jSy9fBFoWOcvEKwBuLiYPVs8hrOdow=
+      X-Amz-Request-Id:
+      - 0BE11CB38DBAE349
+      Date:
+      - Tue, 05 Sep 2017 19:31:14 GMT
+      Last-Modified:
+      - Tue, 05 Sep 2017 19:31:12 GMT
+      Etag:
+      - '"9a0364b9e99bb480dd25e1f0284c8555"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '7'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: content
+    http_version: 
+  recorded_at: Tue, 05 Sep 2017 19:31:13 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/temp_file/saved
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
+      X-Amz-Date:
+      - 20170905T193113Z
+      Host:
+      - file-manager-tests.s3-us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=1256dea399728044ac726831903c6881d13fe35e9b2df7815668a3fb7df1e49c
+      Content-Length:
+      - '0'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - lvcN93Sm1hCQ8hL5G/FVyDs1jBrMBGPLcZ1XFwT8S1LGok6LATTuf7ECp/JdRlsruqynqEPBq/w=
+      X-Amz-Request-Id:
+      - 776F417270F33D9C
+      Date:
+      - Tue, 05 Sep 2017 19:31:14 GMT
+      Last-Modified:
+      - Tue, 05 Sep 2017 19:31:12 GMT
+      Etag:
+      - '"9a0364b9e99bb480dd25e1f0284c8555"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - ''
+      Content-Length:
+      - '7'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: content
+    http_version: 
+  recorded_at: Tue, 05 Sep 2017 19:31:13 GMT
+- request:
+    method: delete
+    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/temp_file/saved
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
+      X-Amz-Date:
+      - 20170905T193113Z
+      Host:
+      - file-manager-tests.s3-us-west-2.amazonaws.com
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
+        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=0f4da92980176e880b3d5c8f837d270c17d4c1a9849aa905650dc073bcb994ac
+      Content-Length:
+      - '0'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      X-Amz-Id-2:
+      - RGyAFzIbtaWZ6tWxwpay0kziUm4lUDVuopRLLHrwOl79h+IaCit61Q6J2KO3YEtHuPpjaQ2hP54=
+      X-Amz-Request-Id:
+      - DFEAEC74800C8768
+      Date:
+      - Tue, 05 Sep 2017 19:31:15 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 05 Sep 2017 19:31:14 GMT
+recorded_with: VCR 3.0.1

@@ -15,6 +15,10 @@ class FileManager
     raise 'Not implemented!'
   end
 
+  def download_to_temp_file(file_name)
+    raise 'Not implemented!'
+  end
+
   def list_files(prefix = '', file_extension = '*')
     raise 'Not implemented!'
   end
