@@ -2,12 +2,12 @@ language: ruby
 env:
   - JRUBY_OPTS=--debug
 rvm:
-  - 2.2.1
-  - jruby-19mode
+  - 2.4.4
+  - jruby-9.1.17.0
   - ruby-head
   - jruby-head
 jdk:
-  - openjdk7
+  - openjdk8
 before_install:
   - gem update --system
   - gem --version
