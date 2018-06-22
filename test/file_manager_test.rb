@@ -1,6 +1,8 @@
 require './test/test_helper'
 require 'memory_file_manager'
 
+SingleCov.covered! uncovered: 5
+
 module FileManagerTest
   def test_reading
     assert_raises(FileNotFoundError) { @manager.read_file 'not_saved' }

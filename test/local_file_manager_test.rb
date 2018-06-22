@@ -1,6 +1,8 @@
 require './test/test_helper'
 require 'local_file_manager'
 
+SingleCov.covered!
+
 class LocalFileManagerTest < Minitest::Test
   include FileManagerTest
 

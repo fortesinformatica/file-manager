@@ -1,3 +1,5 @@
+require 'single_cov'
+SingleCov.setup :minitest
 require 'minitest/autorun'
 require 'webmock/minitest'
 require 'vcr'

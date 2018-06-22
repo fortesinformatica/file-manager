@@ -1,6 +1,8 @@
 require './test/test_helper'
 require 's3_file_manager'
 
+SingleCov.covered!
+
 class S3FileManagerTest < Minitest::Test
   include FileManagerTest
 
