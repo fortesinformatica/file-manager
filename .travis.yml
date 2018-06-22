@@ -1,4 +1,6 @@
 language: ruby
+env:
+  - JRUBY_OPTS=--debug
 rvm:
   - 2.2.1
   - jruby-19mode
