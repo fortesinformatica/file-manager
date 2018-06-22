@@ -1,5 +1,5 @@
 require 'single_cov'
-SingleCov.setup :minitest
+SingleCov.setup :minitest, branches: SingleCov::BRANCH_COVERAGE_SUPPORTED && RUBY_PLATFORM != "java"
 require 'minitest/autorun'
 require 'webmock/minitest'
 require 'vcr'
