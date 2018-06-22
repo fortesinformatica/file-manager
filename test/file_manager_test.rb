@@ -69,3 +69,12 @@ module FileManagerTest
   end
 
 end
+
+class FileManagerLoggerTest < Minitest::Test
+
+  def test_logger_prints_and_puts
+    logger = FileManager::Logger.new({})
+    assert_output("hello\n") { logger.puts "hello" }
+    assert_output("hi") { logger.print "hi" }
+  end
+end
