@@ -1,5 +1,5 @@
 require 'file_manager'
-require 'aws-sdk'
+require 'aws-sdk-s3'
 
 class S3FileManager < FileManager
 

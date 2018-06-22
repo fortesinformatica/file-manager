@@ -16,9 +16,9 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
   spec.homepage    = 'https://github.com/fortesinformatica/file-manager'
 
-  spec.add_dependency 'aws-sdk', '2.2.13'
+  spec.add_dependency 'aws-sdk-s3', '~> 1'
   spec.add_development_dependency "bundler", ">= 1.16.2"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rake", '10.5.0'
   spec.add_development_dependency 'minitest'
   spec.add_development_dependency 'vcr'
   spec.add_development_dependency 'webmock'

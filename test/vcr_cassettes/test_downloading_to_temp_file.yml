@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: put
-    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/temp_file/saved
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/temp_file/saved
     body:
       encoding: UTF-8
       string: content
@@ -54,7 +54,7 @@ http_interactions:
   recorded_at: Tue, 05 Sep 2017 19:31:12 GMT
 - request:
     method: get
-    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/temp_file/saved
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/temp_file/saved
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -108,7 +108,7 @@ http_interactions:
   recorded_at: Tue, 05 Sep 2017 19:31:13 GMT
 - request:
     method: get
-    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/temp_file/saved
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/temp_file/saved
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -162,7 +162,7 @@ http_interactions:
   recorded_at: Tue, 05 Sep 2017 19:31:13 GMT
 - request:
     method: delete
-    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/temp_file/saved
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/temp_file/saved
     body:
       encoding: ASCII-8BIT
       string: ''

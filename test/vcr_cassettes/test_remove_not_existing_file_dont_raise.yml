@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/?encoding-type=url&prefix=
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?encoding-type=url&prefix=
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -54,7 +54,7 @@ http_interactions:
   recorded_at: Tue, 15 Mar 2016 14:44:26 GMT
 - request:
     method: delete
-    uri: https://file-manager-tests.s3-us-west-2.amazonaws.com/sub_dir/saved.*
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/sub_dir/saved.*
     body:
       encoding: ASCII-8BIT
       string: ''
