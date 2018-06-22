@@ -17,10 +17,9 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://github.com/fortesinformatica/file-manager'
 
   spec.add_dependency 'aws-sdk', '2.2.13'
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_development_dependency "bundler", ">= 1.16.2"
   spec.add_development_dependency "rake"
   spec.add_development_dependency 'minitest'
   spec.add_development_dependency 'vcr'
   spec.add_development_dependency 'webmock'
-  spec.add_development_dependency 'codeclimate-test-reporter'
 end

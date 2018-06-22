@@ -1,4 +1,7 @@
-# File::Manager [![Build Status](https://travis-ci.org/fortesinformatica/file-manager.svg?branch=master)](https://travis-ci.org/fortesinformatica/file-manager) [![Code Climate](https://codeclimate.com/github/fortesinformatica/file-manager/badges/gpa.svg)](https://codeclimate.com/github/fortesinformatica/file-manager) [![Test Coverage](https://codeclimate.com/github/fortesinformatica/file-manager/badges/coverage.svg)](https://codeclimate.com/github/fortesinformatica/file-manager) [![Dependency Status](https://gemnasium.com/fortesinformatica/file-manager.svg)](https://gemnasium.com/fortesinformatica/file-manager)
+# File::Manager
+
+[![Build Status](https://travis-ci.org/fortesinformatica/file-manager.svg?branch=master)](https://travis-ci.org/fortesinformatica/file-manager)
+[![Code Climate](https://codeclimate.com/github/fortesinformatica/file-manager/badges/gpa.svg)](https://codeclimate.com/github/fortesinformatica/file-manager)
 
 File manager local or S3
 
