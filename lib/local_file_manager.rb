@@ -48,7 +48,7 @@ class LocalFileManager < FileManager
   def delete_file file_name
     @logger.print "Deleting file \"#{file_name}\" from local folder \"#{root_path}\"..."
     full_file_name = File.join(root_path, file_name)
-    File.delete(full_file_name) if File.exists?(full_file_name)
+    File.delete(full_file_name) if File.exist?(full_file_name)
     @logger.puts 'done.'
   end
 
