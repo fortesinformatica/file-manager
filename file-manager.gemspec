@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "file-manager"
-  spec.version       = '0.3.0'
+  spec.version       = '0.4.0'
   spec.authors       = ["Francisco Barroso / Marlus Saraiva"]
   spec.email         = ["franciscobarroso@grupofortes.com.br"]
   spec.description   = 'File manager, access S3 or local'
