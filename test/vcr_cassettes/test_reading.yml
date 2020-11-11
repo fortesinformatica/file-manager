@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/not_saved
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -12,16 +12,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193114Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144014Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=1e6d6d9804f0e81eff1420360c5a69381378bae89815ac3bec6ab4aa29673b21
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ead19690d8b72003b02fdbccaeab83ae82230a21a143c0cddefac260d5965aee
       Content-Length:
       - '0'
       Accept:
@@ -32,24 +32,23 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - AD76AE1BEC8EB2D9
+      - 4F14D49CEB989739
       X-Amz-Id-2:
-      - 3IoluOFr3GMeWgbgK7iCr9YXA1hPQm95+lLKJ9fgGm0JksC7ScykDwyfGKOOuEYTyHYumItHAnE=
+      - mT2NZVPcJxsyCBVVfo3yUj6XJwnIIaVFvLJuw1Z0Q6tEZ1uJZKA+L91YEcNGeUQlI/OisD1yb/4=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 05 Sep 2017 19:31:14 GMT
+      - Wed, 11 Nov 2020 14:40:14 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>not_saved</Key><RequestId>AD76AE1BEC8EB2D9</RequestId><HostId>3IoluOFr3GMeWgbgK7iCr9YXA1hPQm95+lLKJ9fgGm0JksC7ScykDwyfGKOOuEYTyHYumItHAnE=</HostId></Error>
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:15 GMT
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>not_saved</Key><RequestId>4F14D49CEB989739</RequestId><HostId>mT2NZVPcJxsyCBVVfo3yUj6XJwnIIaVFvLJuw1Z0Q6tEZ1uJZKA+L91YEcNGeUQlI/OisD1yb/4=</HostId></Error>
+  recorded_at: Wed, 11 Nov 2020 14:40:15 GMT
 - request:
     method: put
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/saved
@@ -62,20 +61,21 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Expect:
       - 100-continue
       Content-Md5:
       - mgNkuembtIDdJeHwKEyFVQ==
-      X-Amz-Date:
-      - 20170905T193115Z
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144015Z
       X-Amz-Content-Sha256:
       - ed7002b439e9ac845f22357d822bac1444730fbdb6016d3ec9432297b9ec9f73
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=e910535847ad770f0216e71511f6c2c5ad74fa6d9673b6518deb84623a4de253
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=content-md5;host;user-agent;x-amz-content-sha256;x-amz-date,
+        Signature=e8f0c05ec64c4fbf4d71ebf5ec5b6245be595562de95174b8794c371962cd4b4
       Content-Length:
       - '7'
       Accept:
@@ -86,11 +86,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - onUdLRsx35Dm85dNQqv00ZFPxyGLWIvkFcfErDZQDgBaccNN1V164kLAoG09vEvtQUJDzAqRMy8=
+      - iA1oz6Ph0Y8SyTO3rbsf2qlR5pb4vnM5TJfB+hFMyRWuaal3hNclzvidGRTw8UetgEJTrtDwh0E=
       X-Amz-Request-Id:
-      - A9BD7D0362896E09
+      - 6E0D58751BE9F7D1
       Date:
-      - Tue, 05 Sep 2017 19:31:17 GMT
+      - Wed, 11 Nov 2020 14:40:16 GMT
       Etag:
       - '"9a0364b9e99bb480dd25e1f0284c8555"'
       Content-Length:
@@ -100,13 +100,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:16 GMT
+  recorded_at: Wed, 11 Nov 2020 14:40:16 GMT
 - request:
     method: get
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/saved
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -114,16 +113,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193116Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144016Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=a7178c952aaa3e01b64969ba20e4aa230571f067648e82b35af9f941ef950d74
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=be32c1592cda7c1d23ade651400f728be25f325d10206f3a51d146bcbcf23e93
       Content-Length:
       - '0'
       Accept:
@@ -134,13 +133,13 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - Ym4+s7pyir1KIzyyPGSumZaDC9SQa4ooxPPiaxw0RoKAvmZMqdH1mVXJXlEPk2gHmULL6BubOIE=
+      - mZUW9T1+HF/HStzW1a9Mrm6XK+taiAro2YQkD3Ng/YlH048d4yWiQD2sMYcNyOdWeQImqUhhwuE=
       X-Amz-Request-Id:
-      - ED59411FE4752FB1
+      - 9J7HCV5N9XEV4MBR
       Date:
-      - Tue, 05 Sep 2017 19:31:17 GMT
+      - Wed, 11 Nov 2020 14:40:17 GMT
       Last-Modified:
-      - Tue, 05 Sep 2017 19:31:17 GMT
+      - Wed, 11 Nov 2020 14:40:16 GMT
       Etag:
       - '"9a0364b9e99bb480dd25e1f0284c8555"'
       Accept-Ranges:
@@ -154,13 +153,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: content
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:17 GMT
+  recorded_at: Wed, 11 Nov 2020 14:40:17 GMT
 - request:
     method: delete
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/saved
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -168,16 +166,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193117Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144017Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=129102e679227078584c2718cc3937c16aa542f00cfa0b23b9f19755e6cd407e
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=3279b0301a89de8e728ecf06122189cc2e03cdb4e933c0762801af13ce0f2652
       Content-Length:
       - '0'
       Accept:
@@ -188,23 +186,22 @@ http_interactions:
       message: No Content
     headers:
       X-Amz-Id-2:
-      - fN0TbD5X+L1N9n1CAI5gzwJNM32Xing7Iow8PBgBlq8UI3e+zA037hFVTObuiYm7JmM9Nu0AOdA=
+      - EO5tHeO7RyT+TbUNVNo230LSzprHxxT3tkE5W1JupkIL95COL5FX84XiQD+W6dKimGsJ4L9aHbE=
       X-Amz-Request-Id:
-      - FB7B938D0FEFD1D8
+      - '082DB7C8D988F8E6'
       Date:
-      - Tue, 05 Sep 2017 19:31:18 GMT
+      - Wed, 11 Nov 2020 14:40:18 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:17 GMT
+  recorded_at: Wed, 11 Nov 2020 14:40:17 GMT
 - request:
     method: get
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/saved
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -212,16 +209,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193117Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144017Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=48579a30590dda3821888e98ccdb6084736386155f6aeb932f84b5272d5d7917
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=8b45326631633039dbb18aea923774dea6870edc092a50962b796f690cf4aca1
       Content-Length:
       - '0'
       Accept:
@@ -232,22 +229,21 @@ http_interactions:
       message: Not Found
     headers:
       X-Amz-Request-Id:
-      - 79212B043646F1EB
+      - 297314E7C5CD1FD8
       X-Amz-Id-2:
-      - vKoUnrJ5czc8qPUQ0ZjJDrFV8QlfA3lQBeKMHCjot7pzO/ctTAb30R20leWcUAV2BFXwl3hlIco=
+      - A3nA64fZQXzpiMhgwR5WoG0qPHgvDmj5GdZxUNF8sYmG9bi5exMCtlLzyMPVHPgzdoguI2ngV4s=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 05 Sep 2017 19:31:18 GMT
+      - Wed, 11 Nov 2020 14:40:17 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>saved</Key><RequestId>79212B043646F1EB</RequestId><HostId>vKoUnrJ5czc8qPUQ0ZjJDrFV8QlfA3lQBeKMHCjot7pzO/ctTAb30R20leWcUAV2BFXwl3hlIco=</HostId></Error>
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:18 GMT
-recorded_with: VCR 3.0.1
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>saved</Key><RequestId>297314E7C5CD1FD8</RequestId><HostId>A3nA64fZQXzpiMhgwR5WoG0qPHgvDmj5GdZxUNF8sYmG9bi5exMCtlLzyMPVHPgzdoguI2ngV4s=</HostId></Error>
+  recorded_at: Wed, 11 Nov 2020 14:40:18 GMT
+recorded_with: VCR 6.0.0

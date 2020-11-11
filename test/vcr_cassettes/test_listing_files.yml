@@ -2,9 +2,9 @@
 http_interactions:
 - request:
     method: get
-    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?encoding-type=url&prefix=
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?list-type=2&prefix=
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -12,16 +12,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193118Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144043Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=43d63da21bc9fbeafa4ff018e086f015dba92d165ca5cefe8457cc1b28441e5e
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ca6dbe572623d940e9f5ec8ee55c95766cee0e1b2b871623d1e2074b747a94cc
       Content-Length:
       - '0'
       Accept:
@@ -32,11 +32,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - vJqbuT8jPsygGWEPQ1C4UihWrglL85bDP73aCuQiih89Ky/c0PwsuoVj7bLB4N9R979g/Yj20As=
+      - XJA3kFyIHvhpurZtBL2nuRKpDAr1ObnWf0qyijmpRhhcqXJcTI+6mMwnL2NrMg73PioCZ2QlL9Q=
       X-Amz-Request-Id:
-      - 0E45BF7BEC6188BC
+      - BA54EEDAAB6BE145
       Date:
-      - Tue, 05 Sep 2017 19:31:20 GMT
+      - Wed, 11 Nov 2020 14:40:45 GMT
       X-Amz-Bucket-Region:
       - us-west-2
       Content-Type:
@@ -49,9 +49,8 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:19 GMT
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><KeyCount>0</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>
+  recorded_at: Wed, 11 Nov 2020 14:40:44 GMT
 - request:
     method: put
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/saved.*
@@ -64,20 +63,21 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Expect:
       - 100-continue
       Content-Md5:
       - mgNkuembtIDdJeHwKEyFVQ==
-      X-Amz-Date:
-      - 20170905T193119Z
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144044Z
       X-Amz-Content-Sha256:
       - ed7002b439e9ac845f22357d822bac1444730fbdb6016d3ec9432297b9ec9f73
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=content-md5;host;x-amz-content-sha256;x-amz-date, Signature=4b38a76212883ecc7840863fd809d84dffd3af95c055d16138848525ef2c2eb6
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=content-md5;host;user-agent;x-amz-content-sha256;x-amz-date,
+        Signature=82ac07b9e51accbd619f682d398a772c1a12b9d39b200bef4f43e0e1044a266d
       Content-Length:
       - '7'
       Accept:
@@ -88,11 +88,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - OaM4iWKueGYPL5jfGRBb/APY68DVT7pNZAWv1403+GevIynEduiaB2fKdGOCElAlGMncRi3dkYU=
+      - FgSwsS/y9QE2eafUbygiF03KAN2J3KKJLNLT2xilgUjrGY8STnMkV+lt5zY08UMlMLQ/msrGlpo=
       X-Amz-Request-Id:
-      - 63360F32C420D6EA
+      - B187CF96D483E124
       Date:
-      - Tue, 05 Sep 2017 19:31:20 GMT
+      - Wed, 11 Nov 2020 14:40:45 GMT
       Etag:
       - '"9a0364b9e99bb480dd25e1f0284c8555"'
       Content-Length:
@@ -102,13 +102,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:20 GMT
+  recorded_at: Wed, 11 Nov 2020 14:40:45 GMT
 - request:
     method: get
-    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?encoding-type=url&prefix=other_prefix
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?list-type=2&prefix=other_prefix
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -116,16 +115,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193120Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144045Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=d2b1dbd5ba46617f346877d82272bd521f25eed46bd754067600a5635f47b0ce
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=fc46c37163c1d6d0cce293ca305e7afa3388c1ae835841c9d262d8e79f82902f
       Content-Length:
       - '0'
       Accept:
@@ -136,11 +135,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - AkA+oWaKR359uq1189MFd3JXAHeO5GxqyOEysF//yWOkj77xNrb+w/Ww0HRs9U/Zwg9TNVQ7Bjw=
+      - VYqzwCnzB6SAs64bn1D0A5YDOfbLQjOsERgWlcEm5JPptVJSNMWG7qMz3RX5VBgozWth66SM+1M=
       X-Amz-Request-Id:
-      - 6C9D930F29DF4093
+      - A0DE23FDC8EEC4D1
       Date:
-      - Tue, 05 Sep 2017 19:31:21 GMT
+      - Wed, 11 Nov 2020 14:40:46 GMT
       X-Amz-Bucket-Region:
       - us-west-2
       Content-Type:
@@ -153,14 +152,13 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>other_prefix</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:20 GMT
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>other_prefix</Prefix><KeyCount>0</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>
+  recorded_at: Wed, 11 Nov 2020 14:40:45 GMT
 - request:
     method: get
-    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?encoding-type=url&prefix=sav
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?list-type=2&prefix=sav
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -168,16 +166,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193120Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144045Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=02e75c9a46d5a785da77e62e3344cbfbbeb9256bca4ad5831b89f06525c5f285
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=be0335756e6facf76a1e865b3ffba1030c2d75bc3ebdbf661a055243d1594487
       Content-Length:
       - '0'
       Accept:
@@ -188,11 +186,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - EvjdGk2r4HbJehcyvOBE8i+2dfuMhpGGnqsjE597/2StEJN98m6BAVESh1gW/W3YsKnF4JUl6l4=
+      - zrkTg6mppuhFLlk8Hfahf2vs+Nar+hA9xz3gxvLfjaQoSEHbPoyjX64b4qOk/A5xutke+Zff6/k=
       X-Amz-Request-Id:
-      - A49CE9459FDD6617
+      - EBD179C9066E182C
       Date:
-      - Tue, 05 Sep 2017 19:31:22 GMT
+      - Wed, 11 Nov 2020 14:40:47 GMT
       X-Amz-Bucket-Region:
       - us-west-2
       Content-Type:
@@ -205,14 +203,13 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>sav</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2017-09-05T19:31:20.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><Owner><ID>93aef73ec9e2412194b36d6a763c119d46a9f0b0cf053130937741f42856242c</ID><DisplayName>desenvolvimento.bedel</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:21 GMT
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>sav</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2020-11-11T14:40:45.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+  recorded_at: Wed, 11 Nov 2020 14:40:46 GMT
 - request:
     method: get
-    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?encoding-type=url&prefix=
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?list-type=2&prefix=
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -220,16 +217,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193121Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144046Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=de4789977c1618ca4960b3b70ba86a12ac98d817c22f53a09c529d8a481add4f
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=2aa01ab41c7f123d8075758815b46959908c7fad03f6de68ee83ed645c93047b
       Content-Length:
       - '0'
       Accept:
@@ -240,11 +237,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - Lj7kKnk35yljDNJhgGtPjQ3ZpUIPHxUfXsfwUQcXa4zY0tZj4AbF5GMq2GT0idiUJ2ZqgGZxYB8=
+      - JYbNZOGtdtG4qPHNBD5nspLPdZLAkTQQ3fuPl7wR0IpmSPUd1VOC6YRVRVSj6YQU4pmJNyfeDxE=
       X-Amz-Request-Id:
-      - 1A0A841C72F5AFD0
+      - 15CB917B84C79716
       Date:
-      - Tue, 05 Sep 2017 19:31:23 GMT
+      - Wed, 11 Nov 2020 14:40:48 GMT
       X-Amz-Bucket-Region:
       - us-west-2
       Content-Type:
@@ -257,14 +254,13 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2017-09-05T19:31:20.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><Owner><ID>93aef73ec9e2412194b36d6a763c119d46a9f0b0cf053130937741f42856242c</ID><DisplayName>desenvolvimento.bedel</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:22 GMT
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2020-11-11T14:40:45.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+  recorded_at: Wed, 11 Nov 2020 14:40:47 GMT
 - request:
     method: get
-    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?encoding-type=url&prefix=sav
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?list-type=2&prefix=sav
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -272,16 +268,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193122Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144047Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=f5d607dec448bfdfbc02f894d47c92c408b82877d7286834c0745f0fe7b2516b
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=57a108b07f93c556be847569d84c9a3a4369215465946d6cbef887e0c85e5a41
       Content-Length:
       - '0'
       Accept:
@@ -292,11 +288,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - JccSQJGLJ+ZtY5ufMyikQMNr9DAycDcRjG1u1Y9JNwYr8Dxp8M7wl7KCZfXW3Fd1KA/02luQwTM=
+      - YSU7HH72kI7T/X968UOjUwCvrkIB7dXsju5SkBzIwmqhXCsiECjzWg2Zv432i5FYKBZVJSaSnaQ=
       X-Amz-Request-Id:
-      - DE6E81EC131808DC
+      - FB2506C6319B14CC
       Date:
-      - Tue, 05 Sep 2017 19:31:24 GMT
+      - Wed, 11 Nov 2020 14:40:49 GMT
       X-Amz-Bucket-Region:
       - us-west-2
       Content-Type:
@@ -309,14 +305,13 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>sav</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2017-09-05T19:31:20.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><Owner><ID>93aef73ec9e2412194b36d6a763c119d46a9f0b0cf053130937741f42856242c</ID><DisplayName>desenvolvimento.bedel</DisplayName></Owner><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:23 GMT
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix>sav</Prefix><KeyCount>1</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Contents><Key>saved.*</Key><LastModified>2020-11-11T14:40:45.000Z</LastModified><ETag>&quot;9a0364b9e99bb480dd25e1f0284c8555&quot;</ETag><Size>7</Size><StorageClass>STANDARD</StorageClass></Contents></ListBucketResult>
+  recorded_at: Wed, 11 Nov 2020 14:40:48 GMT
 - request:
     method: delete
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/saved.*
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -324,16 +319,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193123Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144048Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=d50c336cf3552945ee2eecfddcb44e9561d21fc206b2551fb52a35e4de577b98
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=c961e4902756ff54a7fafa4772e99f1310b6685b291c2ee5d08e1bbea6b8ea56
       Content-Length:
       - '0'
       Accept:
@@ -344,23 +339,22 @@ http_interactions:
       message: No Content
     headers:
       X-Amz-Id-2:
-      - vot8vwwjOqQJi6ygrm41H6jNiIootzMucv0GEdNJDDI1wnHysjWQn0lN4EscX/c1j6/SZLPQgM0=
+      - BgLpZCfDuCxvYFpEmFglJb2iGBpzPXD95KdlDgb4+m+jDwjjRtAmOsElWGqNLsRjVKlOZT2BCo4=
       X-Amz-Request-Id:
-      - 6C93294789208E48
+      - 8970CC2F5A7337F5
       Date:
-      - Tue, 05 Sep 2017 19:31:25 GMT
+      - Wed, 11 Nov 2020 14:40:49 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:24 GMT
+  recorded_at: Wed, 11 Nov 2020 14:40:49 GMT
 - request:
     method: get
-    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?encoding-type=url&prefix=
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/?list-type=2&prefix=
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: ''
     headers:
       Content-Type:
@@ -368,16 +362,16 @@ http_interactions:
       Accept-Encoding:
       - ''
       User-Agent:
-      - aws-sdk-ruby2/2.2.13 ruby/2.2.3 x86_64-darwin14
-      X-Amz-Date:
-      - 20170905T193124Z
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
       Host:
-      - file-manager-tests.s3-us-west-2.amazonaws.com
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201111T144049Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20170905/us-west-2/s3/aws4_request,
-        SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=368a2dd0c65991862a60731cae3f2aa4f704133a2519805223e496417571b1ab
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=079a24de07f965e31dfa550e584a8f18fe01c2f0e1f23a11ce269717e0aa0034
       Content-Length:
       - '0'
       Accept:
@@ -388,11 +382,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - fuJBEj9ResQ8VG+WBe3DGAQ2nmwyLMAjxEErN36snJW0Gctf/Y7GJGjRlquiEbNLge/THuOEyDQ=
+      - PWxzEonlO9GGWnh3SjQM/8PDfZ+6CjjXqYil3UnOJVTwkXt3cY2y0P/0/fJauCMIQngqJoAlioQ=
       X-Amz-Request-Id:
-      - 3B53124695E9D5B5
+      - F5B5C50C933FA075
       Date:
-      - Tue, 05 Sep 2017 19:31:26 GMT
+      - Wed, 11 Nov 2020 14:40:50 GMT
       X-Amz-Bucket-Region:
       - us-west-2
       Content-Type:
@@ -405,7 +399,6 @@ http_interactions:
       encoding: UTF-8
       string: |-
         <?xml version="1.0" encoding="UTF-8"?>
-        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
-    http_version: 
-  recorded_at: Tue, 05 Sep 2017 19:31:25 GMT
-recorded_with: VCR 3.0.1
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>file-manager-tests</Name><Prefix></Prefix><KeyCount>0</KeyCount><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated></ListBucketResult>
+  recorded_at: Wed, 11 Nov 2020 14:40:49 GMT
+recorded_with: VCR 6.0.0
