@@ -52,6 +52,15 @@ class LocalFileManager < FileManager
     @logger.puts 'done.'
   end
 
+  def rename_file original_file_name, target_file_name
+    @logger.print "Renaming file \"#{original_file_name}\" to \"#{target_file_name}\" from local folder \"#{root_path}\"..."
+    full_original_file_name = File.join(root_path, original_file_name)
+    full_target_file_name = Pathname(File.join(root_path, target_file_name))
+    FileUtils.mkdir_p(full_target_file_name.dirname)
+    FileUtils.mv full_original_file_name, full_target_file_name
+    @logger.puts 'done.'
+  end
+
   private
 
   def root_path

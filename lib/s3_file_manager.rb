@@ -80,6 +80,14 @@ class S3FileManager < FileManager
     logger.puts 'done.'
   end
 
+  def rename_file original_file_name, target_file_name
+    s3_service = connect_s3_service
+    bucket = s3_service.bucket(bucket_name)
+    logger.print "Renaming file \"#{original_file_name}\" \"#{target_file_name}\" from bucket \"#{bucket_name}\"..."
+    bucket.object(original_file_name).move_to(bucket: bucket_name, key: target_file_name)
+    logger.puts 'done.'
+  end
+
   private
 
   def connect_s3_service

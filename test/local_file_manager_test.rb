@@ -1,5 +1,6 @@
 require './test/test_helper'
 require 'local_file_manager'
+require_relative 'file_manager_test'
 
 SingleCov.covered!
 

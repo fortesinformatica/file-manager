@@ -40,6 +40,14 @@ file_manager_txt = factory.create(:txt)
 
 file_manager_txt.save_file('babau.txt', 'buuuu')
 
+## Testing
+
+```sh
+export AWS_ACCESS_KEY_ID='' # with your keys
+export AWS_SECRET_ACCESS_KEY=''
+bundle exec rake
+```
+
 ## Contributing
 
 1. Fork it

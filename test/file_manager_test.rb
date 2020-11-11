@@ -68,6 +68,22 @@ module FileManagerTest
     @manager.delete_file 'temp_file/saved'
   end
 
+  def test_rename_file
+    assert_empty @manager.list_files
+    @manager.save_file 'original/name.txt', 'rename_content'
+
+    @manager.rename_file 'original/name.txt', 'new/name.txt'
+    assert_equal ['new/name.txt'], @manager.list_files
+    assert_equal 'rename_content', @manager.read_file('new/name.txt')
+
+    @manager.rename_file 'new/name.txt', 'new/new2/name.txt'
+    assert_equal ['new/new2/name.txt'], @manager.list_files
+    assert_equal 'rename_content', @manager.read_file('new/new2/name.txt')
+  ensure
+    @manager.delete_file 'original/name.txt'
+    @manager.delete_file 'new/new2/name.txt'
+    assert_empty @manager.list_files
+  end
 end
 
 class FileManagerLoggerTest < Minitest::Test

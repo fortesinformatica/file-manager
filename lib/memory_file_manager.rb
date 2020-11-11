@@ -16,6 +16,10 @@ class MemoryFileManager < FileManager
   end
 
   def list_files(prefix = '', file_extension = '*')
+    if prefix == '' && file_extension == '*'
+      return @data.keys
+    end
+
     @data.keys.select{|key| key.start_with?(prefix) && key.end_with?(".#{file_extension}")}
   end
 
@@ -32,4 +36,8 @@ class MemoryFileManager < FileManager
     end
   end
 
+  def rename_file original_file_name, target_file_name
+    @data["#{target_file_name}"] = @data["#{original_file_name}"]
+    @data.delete "#{original_file_name}"
+  end
 end
