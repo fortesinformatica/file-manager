@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    file-manager (0.4.0)
+    file-manager (0.5.0)
       aws-sdk-s3 (~> 1)
 
 GEM
@@ -10,7 +10,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     aws-eventstream (1.1.0)
-    aws-partitions (1.390.0)
+    aws-partitions (1.391.0)
     aws-sdk-core (3.109.2)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
