@@ -59,6 +59,8 @@ class LocalFileManager < FileManager
     FileUtils.mkdir_p(full_target_file_name.dirname)
     FileUtils.mv full_original_file_name, full_target_file_name
     @logger.puts 'done.'
+  rescue Errno::ENOENT
+    raise FileNotFoundError.new(full_original_file_name)
   end
 
   private

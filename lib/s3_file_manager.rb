@@ -86,6 +86,8 @@ class S3FileManager < FileManager
     logger.print "Renaming file \"#{original_file_name}\" \"#{target_file_name}\" from bucket \"#{bucket_name}\"..."
     bucket.object(original_file_name).move_to(bucket: bucket_name, key: target_file_name)
     logger.puts 'done.'
+  rescue Aws::S3::Errors::NoSuchKey
+    raise FileNotFoundError.new("#{bucket_name}/#{original_file_name}")
   end
 
   private

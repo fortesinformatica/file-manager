@@ -79,6 +79,8 @@ module FileManagerTest
     @manager.rename_file 'new/name.txt', 'new/new2/name.txt'
     assert_equal ['new/new2/name.txt'], @manager.list_files
     assert_equal 'rename_content', @manager.read_file('new/new2/name.txt')
+
+    assert_raises(FileNotFoundError) { @manager.rename_file 'nao_existe/name.txt', 'new/name.txt' }
   ensure
     @manager.delete_file 'original/name.txt'
     @manager.delete_file 'new/new2/name.txt'
