@@ -63,6 +63,17 @@ class LocalFileManager < FileManager
     raise FileNotFoundError.new(full_original_file_name)
   end
 
+  def copy_file source_file_name, target_file_name
+    @logger.print "Copying file \"#{source_file_name}\" to \"#{target_file_name}\" from local folder \"#{root_path}\"..."
+    full_source_file_name = File.join(root_path, source_file_name)
+    full_target_file_name = Pathname(File.join(root_path, target_file_name))
+    FileUtils.mkdir_p(full_target_file_name.dirname)
+    FileUtils.cp full_source_file_name, full_target_file_name
+    @logger.puts 'done.'
+  rescue Errno::ENOENT
+    raise FileNotFoundError.new(full_source_file_name)
+  end
+
   private
 
   def root_path

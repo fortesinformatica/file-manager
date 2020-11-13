@@ -40,4 +40,8 @@ class MemoryFileManager < FileManager
     @data["#{target_file_name}"] = @data["#{original_file_name}"] || (raise FileNotFoundError.new("No such file '#{original_file_name}'"))
     @data.delete "#{original_file_name}"
   end
+
+  def copy_file source_file_name, target_file_name
+    @data["#{target_file_name}"] = @data["#{source_file_name}"] || (raise FileNotFoundError.new("No such file '#{source_file_name}'"))
+  end
 end

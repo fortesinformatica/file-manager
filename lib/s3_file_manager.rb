@@ -90,6 +90,16 @@ class S3FileManager < FileManager
     raise FileNotFoundError.new("#{bucket_name}/#{original_file_name}")
   end
 
+  def copy_file source_file_name, target_file_name
+    s3_service = connect_s3_service
+    bucket = s3_service.bucket(bucket_name)
+    logger.print "Copying file \"#{source_file_name}\" \"#{target_file_name}\" from bucket \"#{bucket_name}\"..."
+    bucket.object(source_file_name).copy_to(bucket: bucket_name, key: target_file_name)
+    logger.puts 'done.'
+  rescue Aws::S3::Errors::NoSuchKey
+    raise FileNotFoundError.new("#{bucket_name}/#{source_file_name}")
+  end
+
   private
 
   def connect_s3_service

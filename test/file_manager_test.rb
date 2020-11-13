@@ -86,6 +86,24 @@ module FileManagerTest
     @manager.delete_file 'new/new2/name.txt'
     assert_empty @manager.list_files
   end
+
+  def test_copy_file
+    assert_empty @manager.list_files
+    @manager.save_file 'original/name.txt', 'same_content'
+
+    @manager.copy_file 'original/name.txt', 'new/name.txt'
+    assert_equal ['new/name.txt', 'original/name.txt'].sort, @manager.list_files.sort
+    assert_equal 'same_content', @manager.read_file('new/name.txt')
+
+    @manager.copy_file 'original/name.txt', 'new/name.txt'
+    assert_equal ['new/name.txt', 'original/name.txt'].sort, @manager.list_files.sort
+
+    assert_raises(FileNotFoundError) { @manager.copy_file 'nao_existe/name.txt', 'new/name.txt' }
+  ensure
+    @manager.delete_file 'original/name.txt'
+    @manager.delete_file 'new/name.txt'
+    assert_empty @manager.list_files
+  end
 end
 
 class FileManagerLoggerTest < Minitest::Test
