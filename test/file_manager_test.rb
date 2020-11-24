@@ -66,6 +66,7 @@ module FileManagerTest
     end
 
     @manager.delete_file 'temp_file/saved'
+    assert_raises(FileNotFoundError) { @manager.download_to_temp_file('temp_file/saved') {} }
   end
 
   def test_rename_file

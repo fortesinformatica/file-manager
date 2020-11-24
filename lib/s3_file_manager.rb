@@ -41,6 +41,8 @@ class S3FileManager < FileManager
       yield(temp_file)
     end
     logger.puts 'done.'
+  rescue Aws::S3::Errors::NoSuchKey
+    raise FileNotFoundError.new("#{bucket_name}/#{file_name}")
   end
 
   def list_files(prefix = '', file_extension = '*')

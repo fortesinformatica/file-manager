@@ -32,6 +32,8 @@ class LocalFileManager < FileManager
       yield(temp_file)
     end
     @logger.puts 'done.'
+  rescue Errno::ENOENT
+    raise FileNotFoundError.new(full_file_name)
   end
 
   def list_files(prefix = '', file_extension = '*')

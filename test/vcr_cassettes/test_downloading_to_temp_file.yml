@@ -20,13 +20,13 @@ http_interactions:
       Host:
       - file-manager-tests.s3.us-west-2.amazonaws.com
       X-Amz-Date:
-      - 20201111T144040Z
+      - 20201124T145029Z
       X-Amz-Content-Sha256:
       - ed7002b439e9ac845f22357d822bac1444730fbdb6016d3ec9432297b9ec9f73
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201124/us-west-2/s3/aws4_request,
         SignedHeaders=content-md5;host;user-agent;x-amz-content-sha256;x-amz-date,
-        Signature=6bacc791a90a0b2053983d6074292bacae3feb963f5f248972dfeb8ce49af257
+        Signature=1553631fdede92e7c00cdfc3c2695fddd968619d76c58a3aedb4ec3d2af6216d
       Content-Length:
       - '7'
       Accept:
@@ -37,11 +37,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - v7pIH4x9r0GjI9FlS7UH+lLgWxMtGr6So7K1oM9VmZhtudDxVA4LjtHZgKXV4kafyBADrtiHxBE=
+      - M+sMGbF/0sv9rsxptZZE54Y3+E7Zr0lLMs2jmlBLlykPHYQFuxqRCL5/SXOKPyC+6eFW8WdJhpo=
       X-Amz-Request-Id:
-      - '088B960103233B1F'
+      - E2ED2A94148D8A42
       Date:
-      - Wed, 11 Nov 2020 14:40:42 GMT
+      - Tue, 24 Nov 2020 14:50:30 GMT
       Etag:
       - '"9a0364b9e99bb480dd25e1f0284c8555"'
       Content-Length:
@@ -51,7 +51,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Wed, 11 Nov 2020 14:40:41 GMT
+  recorded_at: Tue, 24 Nov 2020 14:50:30 GMT
 - request:
     method: get
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/temp_file/saved
@@ -68,12 +68,12 @@ http_interactions:
       Host:
       - file-manager-tests.s3.us-west-2.amazonaws.com
       X-Amz-Date:
-      - 20201111T144041Z
+      - 20201124T145030Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=173b4dcf56de977f8f97febd9b76233a3ed1b14b7fe82095b9fc3219e6891e42
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201124/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=3553a99ec17f350f66cd836de1c4232204bb6880ee0225d11eef0d96cc077a0e
       Content-Length:
       - '0'
       Accept:
@@ -84,13 +84,13 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - oxm7JHj66N9Et/3UhmG/ZDSCTTA6LxHCIeEyE9NVF5+pbk1wdUK2vqtpT3x8+GvGQn9tBIL0u+8=
+      - 66mnB4P9tZ5nspyQ91ANVbtwvcgI156GsyxjMURwCFU35qeTq4co1NdqLZCg39tcH3r54+ljkwU=
       X-Amz-Request-Id:
-      - 6978EECB4E579781
+      - CFEFB83676E3AD41
       Date:
-      - Wed, 11 Nov 2020 14:40:42 GMT
+      - Tue, 24 Nov 2020 14:50:31 GMT
       Last-Modified:
-      - Wed, 11 Nov 2020 14:40:42 GMT
+      - Tue, 24 Nov 2020 14:50:30 GMT
       Etag:
       - '"9a0364b9e99bb480dd25e1f0284c8555"'
       Accept-Ranges:
@@ -104,7 +104,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: content
-  recorded_at: Wed, 11 Nov 2020 14:40:42 GMT
+  recorded_at: Tue, 24 Nov 2020 14:50:30 GMT
 - request:
     method: get
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/temp_file/saved
@@ -121,12 +121,12 @@ http_interactions:
       Host:
       - file-manager-tests.s3.us-west-2.amazonaws.com
       X-Amz-Date:
-      - 20201111T144042Z
+      - 20201124T145030Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=5a3fe2bc32b36b964cdfbd439ddfc6e66b582525fe726f8f04f55da49830071c
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201124/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=3553a99ec17f350f66cd836de1c4232204bb6880ee0225d11eef0d96cc077a0e
       Content-Length:
       - '0'
       Accept:
@@ -137,13 +137,13 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - U0XDHBcTlMiOjJwClNfEJYHQpD7oIb1wcRu03gOB7xUugVY1DtWGBlULOQfEa2m93N040h+0tMA=
+      - s31pm0mfwgROmbOaNEzb6u1AWjGhnLB7PBfgNfZp0AZ/gA6I4wb6TZ/ZOArBdfqkEhLGlpuXQ8U=
       X-Amz-Request-Id:
-      - 58144A9FA1068710
+      - AB6B9F1835ABBBB4
       Date:
-      - Wed, 11 Nov 2020 14:40:43 GMT
+      - Tue, 24 Nov 2020 14:50:32 GMT
       Last-Modified:
-      - Wed, 11 Nov 2020 14:40:42 GMT
+      - Tue, 24 Nov 2020 14:50:30 GMT
       Etag:
       - '"9a0364b9e99bb480dd25e1f0284c8555"'
       Accept-Ranges:
@@ -157,7 +157,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: content
-  recorded_at: Wed, 11 Nov 2020 14:40:42 GMT
+  recorded_at: Tue, 24 Nov 2020 14:50:31 GMT
 - request:
     method: delete
     uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/temp_file/saved
@@ -174,12 +174,12 @@ http_interactions:
       Host:
       - file-manager-tests.s3.us-west-2.amazonaws.com
       X-Amz-Date:
-      - 20201111T144042Z
+      - 20201124T145031Z
       X-Amz-Content-Sha256:
       - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
       Authorization:
-      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201111/us-west-2/s3/aws4_request,
-        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=30f9e796026f3aacfd9f266a32e79c6c8a886af4f1abcc1b9fb8eef0885e8042
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201124/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=ea30154941154ad4249905230d8fac332aec2dcbb81302d1bc607616c0a0caf3
       Content-Length:
       - '0'
       Accept:
@@ -190,15 +190,64 @@ http_interactions:
       message: No Content
     headers:
       X-Amz-Id-2:
-      - udv2xypDIi4J4u8Z4G1z3H3lDcOre4IY/osPzB68iLB53a86Dg3/0fu32JaJ62V9SLO02FLz7yo=
+      - JFGwdnwwfZkQ3RZMgmgrspZEyv/F7lNEMgynTh5CezJGG8in7MMAXOPLWipSp4cA41S4L2zOiu4=
       X-Amz-Request-Id:
-      - 9QEW5WDRAZDVBXDG
+      - F24A51B9E5B403A8
       Date:
-      - Wed, 11 Nov 2020 14:40:44 GMT
+      - Tue, 24 Nov 2020 14:50:33 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Wed, 11 Nov 2020 14:40:43 GMT
+  recorded_at: Tue, 24 Nov 2020 14:50:32 GMT
+- request:
+    method: get
+    uri: https://file-manager-tests.s3.us-west-2.amazonaws.com/temp_file/saved
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Type:
+      - ''
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby3/3.109.2 ruby/2.5.3 x86_64-linux aws-sdk-s3/1.84.1
+      Host:
+      - file-manager-tests.s3.us-west-2.amazonaws.com
+      X-Amz-Date:
+      - 20201124T145032Z
+      X-Amz-Content-Sha256:
+      - e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAJ73G6IOWSUPCKP5A/20201124/us-west-2/s3/aws4_request,
+        SignedHeaders=host;user-agent;x-amz-content-sha256;x-amz-date, Signature=e0d987aab7932cf51f4fba7447e5cf057a5a78e4737c477e6e0ce1bed651d99a
+      Content-Length:
+      - '0'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      X-Amz-Request-Id:
+      - '09FAB9D7EA1E6425'
+      X-Amz-Id-2:
+      - lUWz95OFeBVsoYoLv0UDvqIvcW+mmS8b6NdfpdVukU+VCDC+A5xS1XGkPq+YxO3Es/nfuus/kow=
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 24 Nov 2020 14:50:32 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>temp_file/saved</Key><RequestId>09FAB9D7EA1E6425</RequestId><HostId>lUWz95OFeBVsoYoLv0UDvqIvcW+mmS8b6NdfpdVukU+VCDC+A5xS1XGkPq+YxO3Es/nfuus/kow=</HostId></Error>
+  recorded_at: Tue, 24 Nov 2020 14:50:32 GMT
 recorded_with: VCR 6.0.0
