@@ -7,6 +7,8 @@ class S3FileManagerTest < Minitest::Test
   include FileManagerTest
 
   FileManagerTest.instance_methods(false).each do |method|
+    next if method == :test_obtain_url_of
+
     define_method(method) do
       VCR.use_cassette(method) do
         super()
@@ -24,4 +26,9 @@ class S3FileManagerTest < Minitest::Test
     )
   end
 
+  private
+
+  def read(url)
+    Net::HTTP.get(URI(url))
+  end
 end

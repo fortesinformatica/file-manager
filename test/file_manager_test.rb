@@ -105,6 +105,14 @@ module FileManagerTest
     @manager.delete_file 'new/name.txt'
     assert_empty @manager.list_files
   end
+
+  def test_obtain_url_of
+    @manager.save_file 'file.txt', 'content'
+    url = @manager.obtain_url_of('file.txt')
+    assert_equal read(url), 'content'
+
+    @manager.delete_file 'file.txt'
+  end
 end
 
 class FileManagerLoggerTest < Minitest::Test

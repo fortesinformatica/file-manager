@@ -23,6 +23,10 @@ class LocalFileManager < FileManager
     @logger.puts 'done.'
   end
 
+  def obtain_url_of(file_name)
+    Pathname(File.join(root_path, file_name))
+  end
+
   def download_to_temp_file(file_name)
     @logger.print "Copying local file \"#{file_name}\" to folder \"#{root_path}\"..."
     full_file_name = Pathname(File.join(root_path, file_name))

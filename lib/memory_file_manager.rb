@@ -15,6 +15,10 @@ class MemoryFileManager < FileManager
     @data["#{file_name}"] = file_contents.to_s
   end
 
+  def obtain_url_of(file_name)
+    file_name
+  end
+
   def list_files(prefix = '', file_extension = '*')
     if prefix == '' && file_extension == '*'
       return @data.keys

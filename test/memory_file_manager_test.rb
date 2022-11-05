@@ -11,4 +11,9 @@ class MemoryFileManagerTest < Minitest::Test
     @manager = MemoryFileManager.new({})
   end
 
+  private
+
+  def read(file_name)
+    @manager.read_file(file_name)
+  end
 end

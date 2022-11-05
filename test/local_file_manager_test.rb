@@ -11,4 +11,9 @@ class LocalFileManagerTest < Minitest::Test
     @manager = LocalFileManager.new({root_path: Dir.mktmpdir + '/root_path/', silent: true})
   end
 
+  private
+
+  def read(path)
+    File.read(path)
+  end
 end
