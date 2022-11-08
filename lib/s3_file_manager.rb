@@ -30,13 +30,6 @@ class S3FileManager < FileManager
     logger.puts 'done.'
   end
 
-  def obtain_url_of(file_name)
-    service = connect_s3_service
-    bucket = service.bucket(bucket_name)
-    object = bucket.object(file_name)
-    object.presigned_url(:get)
-  end
-
   def download_to_temp_file(file_name)
     Dir.mktmpdir do |dir|
       @logger.print "Downloading file \"#{bucket_name}/#{file_name}\" to temp folder \"#{dir}\"..."
