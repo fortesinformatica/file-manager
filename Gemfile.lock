@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    file-manager (0.7.0)
+    file-manager (0.7.1)
       aws-sdk-s3 (~> 1)
 
 GEM
